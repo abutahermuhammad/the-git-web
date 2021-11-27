@@ -12,15 +12,4 @@ Gisthive.org is a free online open platfrom for people like you. Where you can f
 | Static Rendering | Next.Js |
 | Database | Sanity(Structured Content API), MongoDB (For data Log, temporary data, etc.) |
 | UI | Bootstrap |
-| CSS | SASS, SCSS | 
-| Extra |  |
-
-## Libraries
-| Framework | Description | Work |
-|---|---|---|
-| Next.Js | React |  |
-| MongoDB | Next.Js |  |
-| Bootstrap | Sanity(Structured Content API), MongoDB (For data Log, temporary data, etc.) |  |
-| SASS |  |  |
-| Redis | , SCSS |   |
-| date-fns |  |  |
+| CSS | SASS, SCSS |
