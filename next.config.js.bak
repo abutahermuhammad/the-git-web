@@ -3,6 +3,6 @@ module.exports = {
   images: {
     loader: 'cloudinary',
     path: 'http://res.cloudinary.com/gisthive/',
-	minimumCacheTTL: 6468,
+	minimumCacheTTL: 86400,
   },
 }
