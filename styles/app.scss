@@ -1,4 +1,181 @@
 /* Bootstrap Customizations */
+@import "~bootstrap/scss/bootstrap";
 @import "./custom.scss";
 
-@import "~bootstrap/scss/bootstrap";
+
+/*************************/
+/* Colors                */
+/*************************/
+$color-black: #000;
+$color-white: #FFF;
+$color-bg: #F2F2F2;
+
+
+// Navigation 
+.gh_nav_network {
+    padding: 0 !important;
+    border-top: 1px solid black !important;
+    border-bottom: 1px solid black !important;
+    .navbar-light{
+        .navbar-nav {
+            .nav-link {
+                padding: 6px 1rem !important;
+            }
+        } 
+    } 
+}
+
+
+/*************************/
+/* Components            */
+/*************************/
+img {
+    width: 100%; 
+    height: auto;
+}
+
+section {
+    position: relative;
+}
+
+// Button
+.btn {
+    border-radius: 0px !important;
+}
+
+// Link 
+a {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// Carousel 
+.carousel {
+    .carousel-indicators {}
+    .carousel-inner {
+        .carousel-item {
+            width: 100%;
+            position: relative;
+            display: block;
+            &.active {}
+            img {} 
+            .gh-carousel-caption { 
+                width: 400px;
+                padding: 40px;
+                position: absolute;
+                top: 40px;
+                left: 40px;
+                display: block;
+                background: #FFF;
+                .gh-carousel-subtitle {
+                    margin-bottom: 20px;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: #555555;
+                }
+                .gh-carousel-title {
+                    margin-bottom: 10px;
+                    font-weight: bold;
+                    font-size: 30px;
+                    line-height: 130%;
+                    color: #1A1A1A;
+                }
+                .gh-carousel-desc {
+                    margin-bottom: 35px;
+                    font-size: 14px;
+                    line-height: 130%;
+                    color: #555555;
+                }
+                .gh-carousel-link {
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 18px;
+                    color: #1A1A1A !important; 
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    // Carousel Controllers 
+    .carousel-control-prev {}
+    .carousel-control-next {}
+}
+
+// Card 
+.gh-card {
+    color: #000;
+    text-decoration: none !important;
+    .card {
+        height: 100%;
+        border: 0 !important;
+        border-radius: 0 !important;
+        &:hover {
+            // box-shadow: 0 12px 60px rgba(10, 10, 10, .3) !important;
+        }
+        .card-img {
+            border-radius: 0 !important;
+        }
+        .card-body {
+            padding-top: 10px;
+            .card-subtitle {
+                margin-bottom: 10px;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 15px;
+                font-variant: small-caps;
+                color: #555555;
+            }
+            .card-title {
+                margin-bottom: 20px;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 120.6%;
+                color: #1A1A1A;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            .card-text {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 160%;
+                color: #555555;
+            }
+        }
+    }
+}
+
+
+/*************************/
+/* Blocks                */
+/*************************/
+.gh-s-hero {
+    margin: 35px 0;
+    .container {}
+}
+
+
+// Banner 
+.gh-s-banner {
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/*************************/
+/* Document              */
+/*************************/
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background: $color-white;
+}
