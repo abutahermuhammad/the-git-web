@@ -1,4 +1,4 @@
-import '../styles/App.scss';
+import '../styles/app.scss';
 
 
 function MyApp({ Component, pageProps }) {
