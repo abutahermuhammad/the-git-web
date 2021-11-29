@@ -7,8 +7,13 @@ import { IconContext } from "react-icons"
 import { GiHamburgerMenu } from "react-icons/gi"
 import { BiUserCircle } from "react-icons/bi"
 
+import { useUser, UserButton } from "@clerk/nextjs";
 
-const NavigationPrimary = ({data}) => {
+
+const NavigationPrimary = ({ data }) => {
+    // Get the current user's firstName
+    const { firstName } = useUser();
+
     return (
         <>            
             <Navbar className="gh_nav_menu" bg="light" expand="lg">
@@ -34,13 +39,18 @@ const NavigationPrimary = ({data}) => {
 
                     <div>
                         <div className="gh_nav_avater">
-                            <Link href={`/login`}>
-                                <a>
-                                    <IconContext.Provider value={{title: "Profile Link", size: "25px", color: "#000", className: "global-class-name" }}>
-                                        <BiUserCircle />
-                                    </IconContext.Provider>
-                                </a>
-                            </Link>
+                            {firstName ? (
+                                <UserButton/>
+                            ) : (
+                                <Link href={`/login`}>
+                                    <a>
+                                        <IconContext.Provider value={{title: "Profile Link", size: "25px", color: "#000", className: "global-class-name" }}>
+                                            <BiUserCircle />
+                                        </IconContext.Provider>
+                                    </a>
+                                </Link>
+                            ) }
+                                
                         </div>
                     </div>
 

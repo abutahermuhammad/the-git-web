@@ -43,12 +43,12 @@ const ReviewAndAnalysis = () => {
                     <Container>
                         <Row>
                             <Col lg={9} md={4} sm={12}>
-                                <h2 className="--s-title">Review & Analysis</h2>
+                                <h2 className="--s-title">REVIEW & ANALYSIS</h2>
                             </Col>
 
                             {/* Populer Area */}
                             <Col lg={3} md={8} sm={12}>
-                                <h2 className="--s-title">Populer</h2>
+                                <h2 className="--s-title">POPULER</h2>
                             </Col>
                         </Row>
                     </Container>

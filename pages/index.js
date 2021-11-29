@@ -7,6 +7,7 @@ import Banner from '../components/Pages/Home/Banner/Banner'
 import Cookie from '../components/Shared/Cookie/Cookie'
 import ReviewAndAnalysis from '../components/Pages/Home/ReviewAndAnalysis/ReviewAndAnalysis'
 import ResearchArticles from '../components/Pages/Home/ResearchArticles/ResearchArticles'
+import EditorsPick from '../components/Pages/Home/EditorsPick/EditorsPick'
 
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
         <Banner />
         <ReviewAndAnalysis />
         <ResearchArticles />
+        <EditorsPick />
       </Layout>
     </>
   )

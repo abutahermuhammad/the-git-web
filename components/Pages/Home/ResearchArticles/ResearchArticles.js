@@ -40,7 +40,7 @@ const ResearchArticles = () => {
             <section>
                 <div className="--s-header">
                     <Container>
-                        <h2 className="--s-title">Latest Research Articles</h2>
+                        <h2 className="--s-title">RESEARCH ARTICLES</h2>
                     </Container>
                 </div>
 

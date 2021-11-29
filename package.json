@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^2.2.1",
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^2.21.10",
     "@sanity/image-url": "^1.0.1",
