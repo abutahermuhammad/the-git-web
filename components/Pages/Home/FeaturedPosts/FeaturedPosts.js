@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Card, Col, Container, Row } from 'react-bootstrap'
+import CardNormal from '../../../Shared/Cards/CardNormal'
 
 
 const data = [
@@ -41,19 +42,7 @@ const FeaturedPosts = () => {
                     <Row>
                         {data?.map(item => (
                             <Col lg={3} md={3} sm={12} key={item._id}>
-                                <Link href={`/article/${item._id}`}>
-                                    <a className="gh-card">
-                                        <Card className="mb-4">
-                                            <Card.Img src={item.img} />
-
-                                            <Card.Body>
-                                                <Card.Subtitle className="text-muted">{item.category}</Card.Subtitle>
-                                                <Card.Title>{item.title}</Card.Title>
-                                                <Card.Text>{item.excerpt}</Card.Text>
-                                            </Card.Body>
-                                        </Card>
-                                    </a>
-                                </Link>
+                                <CardNormal className="mb-4" url={`/article/${item._id}`} id={item._id} img={item.img} title={item.title} subtitle={item.category} excerpt={item.excerpt}  />
                             </Col>
                         ))}
                         

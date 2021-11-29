@@ -5,6 +5,7 @@ import Hero from '../components/Pages/Home/Hero/Hero'
 import FeaturedPosts from '../components/Pages/Home/FeaturedPosts/FeaturedPosts'
 import Banner from '../components/Pages/Home/Banner/Banner'
 import Cookie from '../components/Shared/Cookie/Cookie'
+import ReviewAndAnalysis from '../components/Pages/Home/ReviewAndAnalysis/ReviewAndAnalysis'
 
 
 export default function Home() {
@@ -20,7 +21,7 @@ export default function Home() {
         <Hero />
         <FeaturedPosts />
         <Banner />
-
+        <ReviewAndAnalysis />
       </Layout>
     </>
   )
