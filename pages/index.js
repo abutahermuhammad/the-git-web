@@ -4,6 +4,7 @@ import Layout from '../components/Shared/Layout'
 import Hero from '../components/Pages/Home/Hero/Hero'
 import FeaturedPosts from '../components/Pages/Home/FeaturedPosts/FeaturedPosts'
 import Banner from '../components/Pages/Home/Banner/Banner'
+import Cookie from '../components/Shared/Cookie/Cookie'
 
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         <Hero />
         <FeaturedPosts />
         <Banner />
+
       </Layout>
     </>
   )

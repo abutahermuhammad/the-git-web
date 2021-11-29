@@ -149,6 +149,28 @@ a {
     }
 }
 
+.gh-cookie {
+    padding: 15px 0;
+    color: $color-white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    // transform: translateY(-100%);
+    background: $color-black;
+    z-index: 99999;
+    p {
+        margin-bottom: 0;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        color: #C4C4C4;
+    }
+    .--cancel {}
+    .--accept { }
+}
+
 
 /*************************/
 /* Blocks                */
@@ -168,6 +190,69 @@ a {
     img {
         width: 100%;
         height: auto;
+    }
+}
+
+
+// Footer 
+footer {
+    padding-top: 45px;
+    background: $color-bg;
+    .gh-footer-top {
+        margin-bottom: 35px;
+        .gh-footer-wgt {
+            margin-bottom: 30px;
+            .gh-brand-title {
+                margin-bottom: 10px;
+                font-weight: 900;
+                font-size: 35px;
+                line-height: 44px;
+                letter-spacing: 0.04em;
+                color: $color-black;
+            }
+            .--wgt-title {
+                margin-bottom: 10px;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 20px;
+                // letter-spacing: 0.12em;
+                color: $color-black;
+            }
+            .gh-desc {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 18px;
+                color: rgba(0, 0, 0, 0.7);
+            }
+            .vstack {
+                p {
+                    margin: 0;
+                    a {
+                        text-decoration: none;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: rgba(0, 0, 0, 0.7);
+                        &:hover {
+                            color: #000
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .gh-footer-copy {
+        padding: 10px 0;
+        border-top: 1px solid $color-black;
+        p {
+            margin: 0;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+        }
     }
 }
 
