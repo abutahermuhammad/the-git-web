@@ -85,7 +85,7 @@ const ReviewAndAnalysis = () => {
                             <Col lg={3} md={8} sm={12}>
                                 <div className="--s-sidebar">
                                     {data?.map(item => (
-                                        <CardWithOutImage />
+                                        <CardWithOutImage key={ item._id}/>
                                     ))}
                                 </div>
                             </Col>
