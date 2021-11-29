@@ -68,7 +68,7 @@ const EditorsPick = () => {
             <section>
                 <div className="--s-header">
                     <Container>
-                        <h2 className="--s-title">EDITOR'S PICK</h2>
+                        <h2 className="--s-title">{`EDITOR's PICK`}</h2>
                     </Container>
                 </div>
 
