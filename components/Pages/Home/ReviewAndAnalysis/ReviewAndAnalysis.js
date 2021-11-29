@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Container, Row, Col, Card } from 'react-bootstrap'
 import CardNormal from '../../../Shared/Cards/CardNormal'
+import CardWithOutImage from '../../../Shared/Cards/CardWithOutImage'
 
 
 const data = [
@@ -34,7 +35,6 @@ const data = [
     },
 ]
 
-
 const ReviewAndAnalysis = () => { 
     return (
         <>
@@ -43,12 +43,12 @@ const ReviewAndAnalysis = () => {
                     <Container>
                         <Row>
                             <Col lg={9} md={4} sm={12}>
-                                <h2 classs="--s-title">Review & Analysis</h2>
+                                <h2 className="--s-title">Review & Analysis</h2>
                             </Col>
 
                             {/* Populer Area */}
                             <Col lg={3} md={8} sm={12}>
-                                <h2 classs="--s-title">Populer</h2>
+                                <h2 className="--s-title">Populer</h2>
                             </Col>
                         </Row>
                     </Container>
@@ -62,7 +62,7 @@ const ReviewAndAnalysis = () => {
                                     <Col lg={12} md={12} sm={12}>
                                         <Link href={`/`}>
                                             <a className="gh-card">
-                                                <Card className="gh-card-wide mb-4">
+                                                <Card className="gh-card-wide mb-5">
                                                     <Card.Img src={`/img/ra1.jpg`} />
                                                     <Card.Body>
                                                         <Card.Subtitle><span>Article</span>/Physics</Card.Subtitle>
@@ -82,7 +82,13 @@ const ReviewAndAnalysis = () => {
                                 </Row>
                             </Col>
 
-                            <Col lg={3} md={8} sm={12}></Col>
+                            <Col lg={3} md={8} sm={12}>
+                                <div className="--s-sidebar">
+                                    {data?.map(item => (
+                                        <CardWithOutImage />
+                                    ))}
+                                </div>
+                            </Col>
                         </Row>
                     </Container>
                 </div>
