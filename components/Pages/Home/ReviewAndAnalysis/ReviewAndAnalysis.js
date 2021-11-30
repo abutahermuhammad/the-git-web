@@ -42,12 +42,12 @@ const ReviewAndAnalysis = () => {
                 <div className="--s-header">
                     <Container>
                         <Row>
-                            <Col lg={9} md={4} sm={12}>
+                            <Col lg={9} md={8} sm={12}>
                                 <h2 className="--s-title">REVIEW & ANALYSIS</h2>
                             </Col>
 
                             {/* Populer Area */}
-                            <Col lg={3} md={8} sm={12}>
+                            <Col lg={3} md={4} sm={12}>
                                 <h2 className="--s-title">POPULER</h2>
                             </Col>
                         </Row>
@@ -57,12 +57,12 @@ const ReviewAndAnalysis = () => {
                 <div className="--s-body">
                     <Container>
                         <Row>
-                            <Col lg={9} md={4} sm={12}>
+                            <Col lg={9} md={8} sm={12}>
                                 <Row>
-                                    <Col lg={12} md={12} sm={12}>
+                                    <Col lg={12} md={12} sm={12} className="mb-4">
                                         <Link href={`/`}>
                                             <a className="gh-card">
-                                                <Card className="gh-card-wide mb-5">
+                                                <Card className="gh-card-wide">
                                                     <Card.Img src={`/img/ra1.jpg`} />
                                                     <Card.Body>
                                                         <Card.Subtitle><span>Article</span>/Physics</Card.Subtitle>
@@ -82,7 +82,7 @@ const ReviewAndAnalysis = () => {
                                 </Row>
                             </Col>
 
-                            <Col lg={3} md={8} sm={12}>
+                            <Col lg={3} md={4} sm={12}>
                                 <div className="--s-sidebar">
                                     {data?.map(item => (
                                         <CardWithOutImage key={ item._id}/>

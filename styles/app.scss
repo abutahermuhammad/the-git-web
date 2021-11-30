@@ -1,6 +1,7 @@
 /* Bootstrap Customizations */
 @import "~bootstrap/scss/bootstrap";
 @import "./custom.scss";
+@import "./typography.module.scss";
 
 
 /*************************/
@@ -10,12 +11,14 @@ $color-black: #000;
 $color-white: #FFF;
 $color-bg: #F2F2F2;
 
+$border: 1px solid #d5d5d5;
+
 
 // Navigation 
 .gh_nav_network {
     padding: 0 !important;
-    border-top: 1px solid black !important;
-    border-bottom: 1px solid black !important;
+    border-top: $border !important;
+    border-bottom: $border !important;
     .navbar-light{
         .navbar-nav {
             .nav-link {
@@ -77,8 +80,10 @@ a {
                 .gh-carousel-title {
                     margin-bottom: 10px;
                     font-weight: bold;
-                    font-size: 30px;
-                    line-height: 130%;
+                    // font-size: 30px;
+                    // line-height: 130%;
+                    font-size: min(max(2.4rem, 3vw), 3.2rem);
+                    line-height: min(max(2.6rem, 3vw), 3.6rem);
                     color: #1A1A1A;
                 }
                 .gh-carousel-desc {
@@ -111,6 +116,9 @@ a {
         height: 100%;
         border: 0 !important;
         border-radius: 0 !important;
+        &:last-of-type {
+            margin-bottom: 0px !important;
+        }
         &:hover {
             // box-shadow: 0 12px 60px rgba(10, 10, 10, .3) !important;
         }
@@ -118,7 +126,7 @@ a {
             border-radius: 0 !important;
         }
         .card-body {
-            padding-top: 10px;
+            padding-top: 16px;
             .card-subtitle {
                 margin-bottom: 10px;
                 font-style: normal;
@@ -129,7 +137,7 @@ a {
                 color: #555555;
             }
             .card-title {
-                margin-bottom: 20px;
+                margin-bottom: 0 !important;
                 font-weight: bold;
                 font-size: 16px;
                 line-height: 120.6%;
@@ -139,6 +147,7 @@ a {
                 }
             }
             .card-text {
+                margin-top: 20px;
                 font-style: normal;
                 font-weight: normal;
                 font-size: 13px;
@@ -167,7 +176,7 @@ a {
         }
         .card-body {
             width: 50%;
-            padding-top: 10px;
+            padding-top: 16px;
             .card-subtitle {
                 margin-bottom: 10px;
                 font-style: normal;
@@ -181,7 +190,7 @@ a {
                 }
             }
             .card-title {
-                margin-bottom: 20px;
+                margin-bottom: 0px !important;
                 font-weight: bold;
                 font-size: 28px;
                 line-height: 120.6%;
@@ -191,6 +200,7 @@ a {
                 }
             }
             .card-text {
+                margin-top: 20px;
                 font-weight: normal;
                 font-size: 13px;
                 line-height: 150%;
@@ -202,24 +212,30 @@ a {
 }
 @media (max-width: 767px) {
     .gh-card {
-        color: #000;
+        color: #fff;
         text-decoration: none !important;
+        background: $color-black;
 
         .gh-card-wide {
             flex-direction: column;
-
+            background: $color-black !important;
             .card-img {
                 width: 100%;
             }
-
             .card-body {
                 width: 100%;
-
-                .card-subtitle {}
-
-                .card-title {}
-
-                .card-text {}
+                .card-subtitle {
+                    color: #fff; 
+                    span {
+                        color: $color-white;
+                    }
+                }
+                .card-title {
+                    color: #fff;
+                }
+                .card-text {
+                    color: #fff;
+                }
             }
         }
     }
@@ -231,7 +247,7 @@ a {
     // padding-bottom: 25px;
     border-top: 0 !important;
     border-right: 0 !important;
-    border-bottom: 1px solid $color-black;
+    border-bottom: $border;
     border-left: 0 !important;  
     border-radius: 0 !important;
     &:last-of-type {
@@ -256,7 +272,7 @@ a {
             color: #1A1A1A;
         }
         .card-title {
-            margin-bottom: 10px;
+            margin-bottom: 0px !important;
             font-style: normal;
             font-weight: bold;
             font-size: 20px;
@@ -264,10 +280,11 @@ a {
             color: #1A1A1A;
         }
         .--card-excerpt {
+            margin-top: 10px;
             margin-bottom: 20px;
             font-style: normal;
             font-weight: normal;
-            font-size: 14px;
+            font-size: 13px;
             line-height: 150%;
             letter-spacing: -0.0001em;
             color: #555555;
@@ -287,11 +304,10 @@ a {
 
 // Card: Without Image
 .gh-card-no-img {
-    margin-bottom: 20px;
-    padding-bottom: 15px;
+    padding: 15px 0;
     border-top: none;
     border-right: none; 
-    border-bottom: 1px solid #000;
+    border-bottom: $border;
     border-left: none; 
     border-radius: 0 !important;
     .card-body { 
@@ -360,7 +376,7 @@ section {
     .--s-header {
         margin-bottom: 20px;
         padding: 10px 0;
-        border-top: 1px solid $color-black;
+        border-top: 4px solid $color-black;
         border-bottom: 1px solid $color-black;
         .--s-title {
             margin: 0px !important;
@@ -379,7 +395,9 @@ section {
 /*************************/
 .gh-s-hero {
     margin: 35px 0;
-    .container {}
+    .container {
+
+    }
 }
 
 
@@ -407,8 +425,10 @@ section {
         .gh-card-ra {
             .card-body {
                 padding: 20px 0 0 0; 
+                border-bottom: $border;
                 .card-title {
-                    font-size: 18px;
+                    margin-bottom: 0px !important;
+                    font-size: 16px;
                     line-height: 120.6%;
                 }
             }
@@ -469,7 +489,7 @@ footer {
     }
     .gh-footer-copy {
         padding: 10px 0;
-        border-top: 1px solid $color-black;
+        border-top: $border;
         p {
             margin: 0;
             font-style: normal;
@@ -485,7 +505,12 @@ footer {
 /*************************/
 /* Document              */
 /*************************/
+html {
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 body {
-    font-family: 'Inter', sans-serif;
     background: $color-white;
 }

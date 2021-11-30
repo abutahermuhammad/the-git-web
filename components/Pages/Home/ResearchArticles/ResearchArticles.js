@@ -52,18 +52,23 @@ const ResearchArticles = () => {
                                     <Card key={item._id} className="gh-card-full-width">
                                         
                                         <Card.Body>
-                                            <Row>
-                                                <Col lg={3} md={3}>
-                                                    <Card.Subtitle className="--card-cat"><span>{ item.category }</span></Card.Subtitle>
-                                                    <Card.Text className="--card-date">23 Feb 2021</Card.Text>
+                                            <Row className="no-wrap">
+                                                <Col lg={9} md={9} sm={8}>
+                                                    <Row>
+                                                        <Col lg={3} md={3} sm={12}>
+                                                            <Card.Subtitle className="--card-cat"><span>{ item.category }</span></Card.Subtitle>
+                                                            <Card.Text className="--card-date">23 Feb 2021</Card.Text>
+                                                        </Col>
+                                                        <Col lg={9} md={9} sm={12}>
+                                                            <Card.Title>{ item.title }</Card.Title>
+                                                            <Card.Text className="--card-excerpt">{item.excerpt}</Card.Text>
+                                                            
+                                                            <Card.Text className="--card-author">Ivana Yen, Frances Shanahan, Shiva Malek</Card.Text>
+                                                        </Col>
+                                                    </Row>
                                                 </Col>
-                                                <Col lg={6} md={6}>
-                                                    <Card.Title>{ item.title }</Card.Title>
-                                                    <Card.Text className="--card-excerpt">{item.excerpt}</Card.Text>
-                                                    
-                                                    <Card.Text className="--card-author">Ivana Yen, Frances Shanahan, Shiva Malek</Card.Text>
-                                                </Col>
-                                                <Col lg={3} md={3}>
+
+                                                <Col lg={3} md={3} sm={4}>
                                                     <Card.Img src={item.img} />
                                                 </Col>
                                             </Row>
