@@ -74,13 +74,13 @@ const ArticleFooter = () => {
                                 <a className="btn btn-sm btn-custom-grey --social-link">
                                     Facebook
                                 </a>
-                                </Link>
+                            </Link>
                                 
                             <Link href={`/`}>
                                 <a className="btn btn-sm btn-custom-grey --social-link">
                                     Instagram
                                 </a>
-                                </Link>
+                            </Link>
                                 
                             <Link href={`/`}>
                                 <a className="btn btn-sm btn-custom-grey --social-link">

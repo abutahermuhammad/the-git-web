@@ -596,6 +596,49 @@ section {
 }
 
 
+.gh-error-404 {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 0;
+    h1 {}
+    h4{} 
+    p {}
+}
+@media (max-width: 767px) {
+    .gh-error-404 {
+
+        h1 { 
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        h4 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        p {}
+    }
+}
+
+@media (min-width: 768px) {
+    .gh-error-404 {
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 35px;
+        }
+
+        h4 {
+            margin-bottom: 20 px;
+        }
+
+        p {}
+    }
+}
+
 // Research Articles 
 .gh-s-research-articles {
     .container {
@@ -690,3 +733,4 @@ html {
 body {
     background: $color-white;
 }
+
