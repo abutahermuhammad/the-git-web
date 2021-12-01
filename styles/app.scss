@@ -395,6 +395,47 @@ a {
         }
     }
 }
+@media (max-width: 768px) {
+    .gh-card-full-width {
+        &:last-of-type {
+            margin-bottom: 0px;
+        }
+
+        .card-body {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+            .--card-cat {
+                margin-bottom: 8px;
+                font-size: 12px;
+                line-height: 13%;
+            }
+
+            .--card-date {
+                margin-bottom: 8px;
+                font-size: 13px;
+                line-height: 24px;
+            }
+
+            .card-title {
+                margin-bottom: 16px !important;
+                font-size: 16px;
+                line-height: 130%;
+            }
+
+            .--card-excerpt {
+                display: none;
+                visibility: hidden;
+            }
+
+            .--card-author {
+                font-size: 13px;
+            }
+
+            .card-image {}
+        }
+    }
+}
+
 
 // Card: Without Image
 .gh-card-no-img {
@@ -566,15 +607,12 @@ section {
                     .card-title {
                         margin-bottom: 20px;
                     }
-                    .--card-excerpt {
-                        display: none;
-                    }
+                    .--card-excerpt {}
                 }
             }
         }
     }
 }
-@media (max-width: 768px) {}
 
 
 // Footer 
