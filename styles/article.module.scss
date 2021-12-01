@@ -107,12 +107,42 @@
         .btn {
             text-decoration: none;
             &:hover {
-                text-decoration: underline;
+                text-decoration: none;
+            }
+        }
+        table {
+            tbody {
+                tr {
+                    th {
+                        padding-right: 10px;
+                    }
+                    td {}
+                }
+            }
+        }
+        .--footer-ilink {
+            tbody {
+                tr {
+                    th {
+                        width: 80px;
+                    }
+
+                    td {}
+                }
             }
         }
         .--footer-wrapper {
             width: 70%;
             margin: 0 auto;
+
+            .--footer-ref {
+                margin-bottom: 10px;
+                .--footer-ref-table {}
+            }
+            .--footer-ilink {
+                margin-bottom: 10px;
+                .--footer-ilink-table {}
+            }
             .--footer-social {
                 margin-bottom: 35px;
                 h5 {
@@ -128,10 +158,122 @@
                     }
                 }
             }
-            .--footer-ilink {
-                .--ilink-group {}
-                .--ilink-item {
+        }
+    }
+}
 
+
+@media ( max-width: 768px) {
+    .gh-single-article {
+        .--single--header {
+            .--header-wrapper {
+                width: 80%;
+                margin: 60px auto 30px auto;
+
+                .--single-title {
+                    font-size: 28px;
+                    line-height: 130%;
+
+                }
+                .--single-meta {
+                    span {}
+                }
+                .--single-excerpt {
+                    font-size: 15px;
+                    line-height: 150%;
+                }
+            }
+        }
+        .--single-cover {
+            .container {
+                padding: 0 !important;
+            }
+        }
+
+        .--single-body {
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            .--body-wrapper {
+                width: 100%;
+                padding-bottom: 40px;
+
+                h3,
+                p,
+                .gh-quote {
+                    width: 90%;
+                }
+
+                h3 {}
+
+                p {
+                    margin-bottom: 20px;
+                    line-height: 160%;
+                    a {}
+                }
+
+                .gh-quote {
+                    margin-bottom: 20px;
+                    padding: 30px;
+
+                    blockquote {}
+                }
+
+                figure {
+                    margin-bottom: 20px;
+
+                    .figimage {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    figcaption {
+                        font-size: 13px;
+
+                        a {}
+                    }
+                }
+            }
+        }
+
+        .--single--footer {
+            a {
+                &:hover {}
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .btn {
+                &:hover {}
+            }
+
+            .--footer-wrapper {
+                width: 90%;
+
+                .--footer-ref {
+                    .--footer-ref-table {}
+                }
+
+                .--footer-ilink {
+                    .--footer-ilink-table {}
+                }
+
+                .--footer-social {
+                    margin-bottom: 40px;
+
+                    h5 {}
+
+                    .--social-group {
+                        .--social-link {
+                            margin-right: 10px;
+
+                            &:last-of-type {
+                                margin-right: 0;
+                            }
+                        }
+                    }
                 }
             }
         }

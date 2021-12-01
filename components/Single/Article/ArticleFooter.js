@@ -9,28 +9,60 @@ const ArticleFooter = () => {
             <Container>
                 <div className="--footer-wrapper">
                     {/* Important Linlk */}
+                    <div className="--footer-ref">
+                        <h5>Important links:</h5>
+                        
+                        <table className="--footer-ref-table">
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        <p>
+                                            1
+                                        </p>
+                                    </th>
+                                    
+                                    <td>
+                                        <p>
+                                            <Link href={`/forums/FQ2351/new-pumpkin-toadlet-species-found—and-it-secretly-glows-in-the-dark`}>
+                                                <a className={ `https://www.nature.com/articles/d41586-021-03534-y`}>
+                                                    https://www.nature.com/articles/d41586-021-03534-y
+                                                </a>
+                                            </Link>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                              
+                    </div>
+                        
+
+                    {/* Important Linlk */}
                     <div className="--footer-ilink">
                         <h5>Important links:</h5>
                         
-                        <div className="--ilink-group">
-                            <div className="--ilink-item">
-                                
-                                <Row>
-                                    <Col lg={1} md={2} sm={2}>
-                                        <p>Forum</p>
-                                    </Col>
-                                    <Col lg={11} md={10} sm={10}>
-                                        <p>: 
-                                            <Link href={`/`}>
+                        <table className="--footer-ilink-table">
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        <p>
+                                            Forum
+                                        </p>
+                                    </th>
+                                    
+                                    <td>
+                                        <p>
+                                            <Link href={`/forums/FQ2351/new-pumpkin-toadlet-species-found—and-it-secretly-glows-in-the-dark`}>
                                                 <a className="">
                                                     New pumpkin toadlet species found—and it secretly glows in the dark.
                                                 </a>
                                             </Link>
                                         </p>
-                                    </Col>
-                                </Row>
-                            </div>
-                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                              
                     </div>
                         
                     {/* Social Link  */}
