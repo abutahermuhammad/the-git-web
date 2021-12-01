@@ -7,12 +7,13 @@ import { IconContext } from "react-icons"
 import { GiHamburgerMenu } from "react-icons/gi"
 import { BiUserCircle } from "react-icons/bi"
 
-import { useUser, UserButton } from "@clerk/nextjs";
+// import { useUser, UserButton } from "@clerk/nextjs";
 
 
 const NavigationPrimary = ({ data }) => {
     // Get the current user's firstName
-    const { firstName } = useUser();
+    // const { firstName } = useUser();
+    const firstName = '';
 
     return (
         <>            
@@ -40,7 +41,8 @@ const NavigationPrimary = ({ data }) => {
                     <div>
                         <div className="gh_nav_avater">
                             {firstName ? (
-                                <UserButton/>
+                                // <UserButton/>
+                                ''
                             ) : (
                                 <Link href={`/login`}>
                                     <a>
