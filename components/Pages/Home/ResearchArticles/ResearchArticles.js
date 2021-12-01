@@ -37,7 +37,7 @@ const data = [
 const ResearchArticles = () => {
     return (
         <>
-            <section>
+            <section className="gh-s-research-articles">
                 <div className="--s-header">
                     <Container>
                         <h2 className="--s-title">RESEARCH ARTICLES</h2>
@@ -53,11 +53,11 @@ const ResearchArticles = () => {
                                         
                                         <Card.Body>
                                             <Row>
-                                                <Col lg={9} md={9} sm={8}>
+                                                <Col lg={9} md={9} sm={8} xs={8}>
                                                     <Row>
                                                         <Col lg={3} md={3} sm={12}>
                                                             <Card.Subtitle className="--card-cat"><span>{ item.category }</span></Card.Subtitle>
-                                                            <Card.Text className="--card-date">23 Feb 2021</Card.Text>
+                                                            <Card.Text className="--card-date mb-2">23 Feb 2021</Card.Text>
                                                         </Col>
                                                         
                                                         <Col lg={9} md={9} sm={12}>
@@ -69,7 +69,7 @@ const ResearchArticles = () => {
                                                     </Row>
                                                 </Col>
 
-                                                <Col lg={3} md={3} sm={4}>
+                                                <Col lg={3} md={3} sm={4} xs={4}>
                                                     {/* <Card.Img src={item.img} /> */}
                                                     <img src={item.img} />
                                                 </Col>

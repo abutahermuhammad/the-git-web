@@ -48,7 +48,7 @@ const ReviewAndAnalysis = () => {
 
                             {/* Populer Area */}
                             <Col lg={3} md={4} sm={0}>
-                                <h2 className="--s-title">POPULER</h2>
+                                <h2 className="--s-title --s-second">POPULER</h2>
                             </Col>
                         </Row>
                     </Container>

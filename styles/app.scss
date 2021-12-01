@@ -520,7 +520,9 @@ section {
 // Research & Analysis
 .gh-s-review-analysis {
     .--s-header {
-        .--s-title {}
+        .--s-title {
+            &.--s-second {}
+        }
     }
 
     .--s-body {
@@ -539,6 +541,40 @@ section {
 
     .--s-footer {}
 }
+@media (max-width: 768px) {
+    .gh-s-review-analysis {
+        .--s-header {
+            .--s-title {
+                &.--s-second {
+                    display: none;
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+}
+
+
+// Research Articles 
+.gh-s-research-articles {
+    .container {
+        .--s-body {
+            .gh-card-full-width {
+                .card-body {
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                    .card-title {
+                        margin-bottom: 20px;
+                    }
+                    .--card-excerpt {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {}
 
 
 // Footer 
