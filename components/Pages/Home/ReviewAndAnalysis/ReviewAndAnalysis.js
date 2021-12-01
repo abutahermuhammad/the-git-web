@@ -47,7 +47,7 @@ const ReviewAndAnalysis = () => {
                             </Col>
 
                             {/* Populer Area */}
-                            <Col lg={3} md={4} sm={12}>
+                            <Col lg={3} md={4} sm={0}>
                                 <h2 className="--s-title">POPULER</h2>
                             </Col>
                         </Row>
@@ -60,7 +60,7 @@ const ReviewAndAnalysis = () => {
                             <Col lg={9} md={8} sm={12}>
                                 <Row>
                                     <Col lg={12} md={12} sm={12} className="mb-4">
-                                        <Link href={`/`}>
+                                        <Link href={`/articles/56`}>
                                             <a className="gh-card">
                                                 <Card className="gh-card-wide">
                                                     <Card.Img src={`/img/ra1.jpg`} />
@@ -76,7 +76,7 @@ const ReviewAndAnalysis = () => {
 
                                     {data?.map(item => (
                                         <Col lg={3} md={3} sm={12} key={item._id}>
-                                            <CardNormal className="mb-4 gh-card-ra" url={`/article/${item._id}`} id={item._id} img={item.img} title={item.title} subtitle={item.category} />
+                                            <CardNormal className="mb-4 gh-card-ra" url={`/articles/${item._id}`} id={item._id} img={item.img} title={item.title} subtitle={item.category} />
                                         </Col>
                                     ))}
                                 </Row>

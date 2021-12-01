@@ -77,7 +77,7 @@ const EditorsPick = () => {
                         <Row>
                             {data?.map(item => (
                                 <Col lg={3} md={3} sm={12} key={item._id}>
-                                    <CardNormal className="gh-card-ra" url={`/article/${item._id}`} id={item._id} img={item.img} title={item.title} subtitle={item.category} />
+                                    <CardNormal className="gh-card-ra" url={`/articles/${item._id}`} id={item._id} img={item.img} title={item.title} subtitle={item.category} />
                                 </Col>
                             ))}
                         </Row>

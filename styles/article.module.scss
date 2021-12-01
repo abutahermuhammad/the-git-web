@@ -1,0 +1,139 @@
+.gh-single-article {
+    .--single--header {
+        .--header-wrapper {
+            width: 70%; 
+            margin: 100px auto 70px auto;
+            .--single-title {
+                margin-bottom: 0px !important;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 48px;
+                line-height: 110%;
+                color: #1A1A1A;
+
+            }
+            .--single-meta {
+                margin-top: 20px;
+                margin-bottom: 0px !important;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 13px;
+                line-height: 130%;
+                color: rgba(0, 0, 0, 0.7);
+                span {
+                    color: #000;
+                    font-weight: bold;
+                }
+            }
+            .--single-excerpt {
+                margin-top: 10px;
+                margin-bottom: 0px !important;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 140%;
+                color: rgba(0, 0, 0, 0.8);
+            }
+        }
+    }
+    .--single-cover {}
+    .--single-body {
+        margin-top: 70px;
+        margin-bottom: 45px; 
+        .--body-wrapper {
+            width: 70%;
+            margin: 0 auto;
+            padding-bottom: 45px;
+            border-bottom: 1px solid #E6E6E6;
+            h3,
+            p,
+            .gh-quote {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            } 
+            h3 {
+                font-weight: bold;
+            }
+            p {
+                margin-bottom: 25px;
+                color: rgba(58, 58, 58, 0.8);
+                a {
+                    color: #000;
+                    text-decoration: none; 
+                    border-bottom: 1px dotted #000;
+                }
+            }
+            .gh-quote {
+                margin-bottom: 25px;
+                padding: 40px;
+                background: #E6E6E6;
+                border-left: 4px solid #000;
+                blockquote { 
+                    margin-bottom: 0;
+                }
+            }
+
+            figure {
+                margin-bottom: 25px;
+                .figimage {
+                    width: 100%;
+                    height: 100%;
+                }
+                figcaption {
+                    color: rgba(0, 0, 0, 0.6);
+                    font-size: 13px;
+                    a {
+                        color: #000;
+                        text-decoration: none;
+                        border-bottom: 1px dotted #000;
+                    }
+                }
+            }
+        }
+    }
+    .--single--footer {
+        a {
+            color: #000;
+            font-size: 14px;
+            text-decoration: none; 
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        p {
+            font-size: 14px; 
+        }
+        .btn {
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .--footer-wrapper {
+            width: 70%;
+            margin: 0 auto;
+            .--footer-social {
+                margin-bottom: 35px;
+                h5 {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                .--social-group {
+                    .--social-link {
+                        margin-right: 20px;
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+            .--footer-ilink {
+                .--ilink-group {}
+                .--ilink-item {
+
+                }
+            }
+        }
+    }
+}

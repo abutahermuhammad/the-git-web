@@ -46,19 +46,20 @@ const ResearchArticles = () => {
 
                 <div className="--s-body">
                     <Container>
-                        <Row>
-                            <Col lg={12} md={12} ms={12}>
+                        {/* <Row>
+                            <Col lg={12} md={12} ms={12}> */}
                                 {data?.map(item => (
                                     <Card key={item._id} className="gh-card-full-width">
                                         
                                         <Card.Body>
-                                            <Row className="no-wrap">
+                                            <Row>
                                                 <Col lg={9} md={9} sm={8}>
                                                     <Row>
                                                         <Col lg={3} md={3} sm={12}>
                                                             <Card.Subtitle className="--card-cat"><span>{ item.category }</span></Card.Subtitle>
                                                             <Card.Text className="--card-date">23 Feb 2021</Card.Text>
                                                         </Col>
+                                                        
                                                         <Col lg={9} md={9} sm={12}>
                                                             <Card.Title>{ item.title }</Card.Title>
                                                             <Card.Text className="--card-excerpt">{item.excerpt}</Card.Text>
@@ -69,14 +70,15 @@ const ResearchArticles = () => {
                                                 </Col>
 
                                                 <Col lg={3} md={3} sm={4}>
-                                                    <Card.Img src={item.img} />
+                                                    {/* <Card.Img src={item.img} /> */}
+                                                    <img src={item.img} />
                                                 </Col>
                                             </Row>
                                         </Card.Body>
                                     </Card>
                                 ))}
-                            </Col>
-                        </Row>
+                            {/* </Col>
+                        </Row> */}
                     </Container>
                 </div>
             </section>

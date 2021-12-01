@@ -42,7 +42,7 @@ const FeaturedPosts = () => {
                     <Row>
                         {data?.map(item => (
                             <Col lg={3} md={3} sm={12} key={item._id}>
-                                <CardNormal className="mb-4" url={`/article/${item._id}`} id={item._id} img={item.img} title={item.title} subtitle={item.category} excerpt={item.excerpt}  />
+                                <CardNormal className="mb-4" url={`/articles/${item._id}`} id={item._id} img={item.img} title={item.title} subtitle={item.category} excerpt={item.excerpt}  />
                             </Col>
                         ))}
                         
