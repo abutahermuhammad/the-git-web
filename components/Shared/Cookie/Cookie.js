@@ -3,7 +3,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap'
 
 
 const Cookie = () => {
-    const [cookie, setCookie] = useState(true)
+    const [cookie, setCookie] = useState(false)
 
     return (
         <>
