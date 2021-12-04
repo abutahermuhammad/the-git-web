@@ -8,7 +8,7 @@ const Error404 = () => {
             <section className="gh-error-404">
                 <Container>
                     <div>
-                        <h1>Our apologies. <br/>We're unable to find  <br/>the page you're looking for.</h1>
+                        <h1>Our apologies. <br/>We&aposre unable to find  <br/>the page you&aposre looking for.</h1>
                         <h4>404. Page Not Found</h4>
 
                         <p>
