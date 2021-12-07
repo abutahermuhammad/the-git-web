@@ -2,68 +2,74 @@ import Link from 'next/link'
 import { Row, Col, Container } from 'react-bootstrap'
 
 
-const ArticleFooter = () => {
+const ArticleFooter = ({ references, importantLinks }) => {
     return (
         <>
             <div className="--single--footer">
             <Container>
                 <div className="--footer-wrapper">
-                    {/* Important Linlk */}
-                    <div className="--footer-ref">
-                        <h5>Important links:</h5>
-                        
-                        <table className="--footer-ref-table">
-                            <tbody>
-                                <tr>
-                                    <th>
-                                        <p>
-                                            1
-                                        </p>
-                                    </th>
-                                    
-                                    <td>
-                                        <p>
-                                            <Link href={`/forums/FQ2351/new-pumpkin-toadlet-species-found—and-it-secretly-glows-in-the-dark`}>
-                                                <a className={ `https://www.nature.com/articles/d41586-021-03534-y`}>
-                                                    https://www.nature.com/articles/d41586-021-03534-y
-                                                </a>
-                                            </Link>
-                                        </p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                              
-                    </div>
+                    {/* References Linlk */}
+                    {references?.length > 0 && (
+                        <div className="--footer-ref">
+                            <h5>Reference links:</h5>
+                            
+                            <table className="--footer-ref-table">
+                                <tbody>
+                                    {references.map( (reference, index) => (
+                                        <tr key={ reference?._key}>
+                                            <th>
+                                                <p>
+                                                    {++index}
+                                                </p>
+                                            </th>
+                                            
+                                            <td>
+                                                <p>
+                                                    <Link href={reference?.url}>
+                                                        <a>
+                                                            {reference?.title}
+                                                        </a>
+                                                    </Link>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>    
+                    )}
                         
 
                     {/* Important Linlk */}
-                    <div className="--footer-ilink">
-                        <h5>Important links:</h5>
+                    {importantLinks?.length > 0 && (
+                        <div className="--footer-ilink">
+                            <h5>Important links:</h5>
                         
-                        <table className="--footer-ilink-table">
-                            <tbody>
-                                <tr>
-                                    <th>
-                                        <p>
-                                            Forum
-                                        </p>
-                                    </th>
-                                    
-                                    <td>
-                                        <p>
-                                            <Link href={`/forums/FQ2351/new-pumpkin-toadlet-species-found—and-it-secretly-glows-in-the-dark`}>
-                                                <a className="">
-                                                    New pumpkin toadlet species found—and it secretly glows in the dark.
-                                                </a>
-                                            </Link>
-                                        </p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                              
-                    </div>
+                            <table className="--footer-ilink-table">
+                                <tbody>
+                                    {importantLinks.map( (iLink, index) => (
+                                        <tr key={iLink?._key}>
+                                            <th>
+                                                <p>
+                                                    {iLink?.type}
+                                                </p>
+                                            </th>
+                                        
+                                            <td>
+                                                <p>
+                                                    <Link href={iLink?.url}>
+                                                        <a className="">
+                                                            {iLink?.title}
+                                                        </a>
+                                                    </Link>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    )}
                         
                     {/* Social Link  */}
                     <div className="--footer-social">

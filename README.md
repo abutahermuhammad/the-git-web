@@ -1,26 +1,7 @@
-# The Gisthive
-Gisthive.org is a free online open platfrom for people like you. Where you can find and read new blog articles, scientific writing, journals & megazines, etc.
-
-[LIVE](https://gisthive.org)
-[BETA](https://beta.gisthive.org)
-[DEV](https://dev.gisthive.org)
-
-## Technical
-| Name | Framework |
-|---|---|
-| Core | React |
-| Static Rendering | Next.Js |
-| Database | Sanity(Structured Content API), MongoDB (For data Log, temporary data, etc.) |
-| UI | Bootstrap |
-| CSS | SASS, SCSS | 
-| Extra |  |
-
-## Libraries
-| Framework | Description | Work |
-|---|---|---|
-| Next.Js | React |  |
-| MongoDB | Next.Js |  |
-| Bootstrap | Sanity(Structured Content API), MongoDB (For data Log, temporary data, etc.) |  |
-| SASS |  |  |
-| Redis | , SCSS |   |
-| date-fns |  |  |
+<p align="center">
+  <a href="https://nextjs.org">
+    <img src="https://dev.gisthive.org/favicon.svg" height="128">
+    <h1 align="center">The Gisthive</h1>
+  </a>
+  <p align="center" >The Gisthive is a free online open platform for people like us. <br/>Where you can find and read new blog articles, scientific writing &amp; journals, etc...</p>
+</p>
