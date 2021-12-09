@@ -20,6 +20,7 @@ const CardFullWidth = ({ id, type, slug, date, image, subtitle, title, excerpt, 
                             <Col lg={3} md={3} sm={12}>
                                 <Card.Subtitle className="--card-cat"><span>{ subtitle[0] }</span> / { subtitle[1] }</Card.Subtitle>
                                 <Card.Text className="--card-date mb-2">
+                                    {/* { date } */}
                                     <Date dateString={date} />
                                 </Card.Text>
                             </Col>

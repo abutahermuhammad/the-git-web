@@ -2,7 +2,6 @@ import { Carousel, Container } from 'react-bootstrap'
 import Image from 'next/image'
 import Link from 'next/link'
 import { imageBuilder } from '../../../../lib/sanity'
-import { width } from 'dom-helpers'
 // API 
 // import getFeaturedPosts from '../../../../lib/api'
 

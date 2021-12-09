@@ -2,12 +2,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Container, Row, Col, Card } from 'react-bootstrap'
 import { imageBuilder } from '../../../../lib/sanity'
-import Date from '../../../core/date'
+// import Date from '../../../core/date'
 import CardFullWidth from '../../../Shared/Cards/CardFullWidth'
 
 
 const ResearchArticles = ({ data }) => {
-    console.log('Research Articles: ', data)
+    // console.log('Research Articles: ', data)
 
     return (
         <>
@@ -23,16 +23,29 @@ const ResearchArticles = ({ data }) => {
                         {data?.map(item => <>
                             {item?._type == "post" &&
                                 <CardFullWidth
-                                key={item._id}
-                                id={item._id}
-                                slug={item.slug}
-                                date={item.date}
-                                image={imageBuilder(item.image).width(253).height(168).url()}
-                                subtitle={[item._type, item.topic[0]]}
-                                title={item.title}
-                                excerpt={item.excerpt}
-                                author={[item?.author?._id, item?.author?.name ]}
+                                    key={item._id}
+                                    id={item._id}
+                                    slug={item.slug}
+                                    date={item?.date?._createdAt}
+                                    image={imageBuilder(item.image).width(253).height(168).url()}
+                                    subtitle={[item._type, item.topic[0]]}
+                                    title={item.title}
+                                    excerpt={item.excerpt}
+                                    author={[item?.author?._id, item?.author?.name ]}
                                 />}
+                            {item?._type == "news" &&
+                                <CardFullWidth
+                                    key={item._id}
+                                    id={item._id}
+                                    slug={item.slug}
+                                    date={item?.date?._createdAt}
+                                    image={imageBuilder(item.image).width(253).height(168).url()}
+                                    subtitle={[item._type, item.topic[0]]}
+                                    title={item.title}
+                                    excerpt={item.excerpt}
+                                    author={[item?.author?._id, item?.author?.name ]}
+                                />
+                            }
                             {/* {item?._type == "news" && <CardFullWidth key={item._id} data={item} type="News" />} */}
                         </>)}
                     </Container>

@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Layout from '../components/Shared/Layout'
 import Hero from '../components/Pages/Home/Hero/Hero'
 import FeaturedPosts from '../components/Pages/Home/FeaturedPosts/FeaturedPosts'
@@ -45,15 +44,12 @@ export async function getStaticProps({ preview = false }) {
   const trendingLimit = [0, 4]  // Default: 0 to 4 total 4.
   const recommendedLimit = [0, 8]  // Default: 0 to 8 total 8.
   const latestLimit = [0, 8]  // Default: 0 to 8 total 8.
-
-  const options = 10;
   
   const sliderPosts = await getSliderContent(sliderLimit)  // Slider Contents.
   const trendingPost = await getTrendingPosts(trendingLimit)  // Trending Contents.
   const recommendedPosts = await getRecommendedPosts(recommendedLimit)  // Recommended Contents.
   const latestPosts = await getLatestPosts(latestLimit)  // Recommended Contents.
 
-  const allPosts = await getAllPostsWithSlug(options)
   const featuredPosts = await getFeaturedPosts()
   const editorPick = await getEditorPickPosts()
 

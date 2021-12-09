@@ -33,13 +33,17 @@ const ReviewAndAnalysis = ({ data }) => {
                         <Row>
                             <Col lg={9} md={8} sm={12}>
                                 <Row>
-                                    <Col lg={12} md={12} sm={12} className="mb-4" key={dataPinned._id}>
-                                        <Link href={`/articles/${dataPinned.url}`}>
+                                    <Col lg={12} md={12} sm={12} className="mb-4" key={dataPinned?._id}>
+                                        <Link href={`/articles/${dataPinned?.url}`}>
                                             <a className="gh-card">
                                                 <Card className="gh-card-wide">
-                                                    <Card.Img src={imageBuilder(dataPinned.image).width(415).height(277).url()} />
+                                                    <Card.Img src={imageBuilder(dataPinned?.image).width(415).height(277).url()} />
                                                     <Card.Body>
-                                                        <Card.Subtitle><span>{dataPinned._type}</span>/{dataPinned.category}</Card.Subtitle>
+                                                        <Card.Subtitle>
+                                                            <span>{dataPinned?._type}</span>
+                                                            /
+                                                            {dataPinned?.category[0]}
+                                                        </Card.Subtitle>
                                                         <Card.Title>{dataPinned.title}</Card.Title>
                                                         <Card.Text>{dataPinned.excerpt}</Card.Text>
                                                     </Card.Body>

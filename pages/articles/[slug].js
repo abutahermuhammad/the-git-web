@@ -10,22 +10,22 @@ import ArticleCover from '../../components/Single/Article/ArticleCover'
 import ArticleBody from '../../components/Single/Article/ArticleBody'
 import ArticleFooter from '../../components/Single/Article/ArticleFooter'
 import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
-import Date from '../../components/core/date'
+// import Date from '../../components/core/date'
 import { imageBuilder } from '../../lib/sanity'
 
 
 const SingleArticle = ({ article, morePosts}) => {
-    console.log('Single Post: ', article)
-    console.log('More Post: ', morePosts)
+    // console.log('Single Post: ', article)
+    // console.log('More Post: ', morePosts)
 
     const router = useRouter()
 
-    if (!router.fallBack && !article.slug) return <ErrorPage statusCode={404} />
+    if (!router?.fallBack && !article?.slug) return <ErrorPage statusCode={404} />
 
     return (
         <>
             <Layout>
-                {router.isFallback ? (
+                {router?.isFallback ? (
                     <h1>Loading...</h1>
                 ) : (
                     <>
@@ -37,8 +37,8 @@ const SingleArticle = ({ article, morePosts}) => {
                             <ArticleHeader
                                 title={article?.title}
                                 author={article?.author?.name}
-                                category="Sea world"
-                                date={<Date dateString={article?.date?._createdAt} />}
+                                category="Sea world" 
+                                date={article?.date?._createdAt}
                                 excerpt={article?.excerpt}
                             />
 

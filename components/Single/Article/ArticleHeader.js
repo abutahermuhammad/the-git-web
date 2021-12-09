@@ -1,5 +1,6 @@
-import React from 'react'
-import { Row, Col, Container } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
+import Date from '../../core/date'
+
 
 const ArticleHeader = ({ title, author, category, date, excerpt }) => {
 
@@ -9,7 +10,12 @@ const ArticleHeader = ({ title, author, category, date, excerpt }) => {
                 <div className="--header-wrapper">
                     <h1 className="--single-title">{title}</h1>
 
-                    <p className="--single-meta">Posted at <span>{category}</span> by <span>{author}</span> at <span>{date}</span></p>
+                    <p className="--single-meta">
+                        Posted at <span>{category}</span> 
+                        by <span>{author}</span> 
+                        at <span><Date dateString={date} /></span>
+                        {/* at <span>{ date }</span> */}
+                    </p>
                     <p className="--single-excerpt">{excerpt}</p>
                 </div>
             </Container>

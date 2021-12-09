@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Row, Col, Container } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 
 
 const ArticleFooter = ({ references, importantLinks }) => {
