@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://nextjs.org">
+  <a href="https://gisthive.org">
     <img src="https://dev.gisthive.org/favicon.svg" height="128">
     <h1 align="center">The Gisthive</h1>
   </a>
