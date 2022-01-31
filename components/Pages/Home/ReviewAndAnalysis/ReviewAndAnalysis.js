@@ -9,6 +9,7 @@ const ReviewAndAnalysis = ({ data }) => {
     const dataPinned = data[0]
     const dataNormal = data.slice(1)
     const dataPopuler = data
+    console.log('Data Populer: ', dataPopuler)
     
     return (
         <>
@@ -41,8 +42,8 @@ const ReviewAndAnalysis = ({ data }) => {
                                                     <Card.Body>
                                                         <Card.Subtitle>
                                                             <span>{dataPinned?._type}</span>
-                                                            /
-                                                            {dataPinned?.category[0]}
+                                                             / 
+                                                            {dataPinned?.category?.title}
                                                         </Card.Subtitle>
                                                         <Card.Title>{dataPinned.title}</Card.Title>
                                                         <Card.Text>{dataPinned.excerpt}</Card.Text>
@@ -54,7 +55,7 @@ const ReviewAndAnalysis = ({ data }) => {
 
                                     {dataNormal?.map(item => (
                                         <Col lg={3} md={3} sm={12} key={item._id}>
-                                            <CardNormal className="mb-4 gh-card-ra" url={`/articles/${item.slug}`} id={item._id} image={item.image} title={item.title} subtitle={[item._type, item.category]} />
+                                            <CardNormal key={item?._id} className="mb-4 gh-card-ra" url={`/articles/${item.slug}`} id={item._id} image={item.image} title={item.title} subtitle={[item._type, item.category]} />
                                         </Col>
                                     ))}
                                 </Row>
@@ -63,7 +64,7 @@ const ReviewAndAnalysis = ({ data }) => {
                             <Col lg={3} md={4} sm={12}>
                                 <div className="--s-sidebar">
                                     {dataPopuler?.map(item => (
-                                        <CardWithOutImage key={ item._id}/>
+                                        <CardWithOutImage key={item?._id} className="" date={item?.date} author={item?.author} url={`/articles/${item.slug}`} id={item._id} image={item.image} title={item.title} subtitle={[item._type, item.category]} />
                                     ))}
                                 </div>
                             </Col>

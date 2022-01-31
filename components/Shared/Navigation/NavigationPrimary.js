@@ -44,7 +44,7 @@ const NavigationPrimary = ({ data }) => {
                                 // <UserButton/>
                                 ''
                             ) : (
-                                <Link href={`/login`}>
+                                <Link href={`https://studio.gisthive.org/`}>
                                     <a>
                                         <IconContext.Provider value={{title: "Profile Link", size: "25px", color: "#000", className: "global-class-name" }}>
                                             <BiUserCircle />

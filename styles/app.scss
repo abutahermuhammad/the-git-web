@@ -9,7 +9,7 @@
 /* Colors                */
 /*************************/
 $color-black: #000;
-$color-white: #FFF;
+$color-white: #FFFFFF;
 $color-bg: #F2F2F2;
 
 $border: 1px solid #d5d5d5;
@@ -84,7 +84,8 @@ a {
                 bottom: 40px;
                 left: 40px;
                 display: block;
-                background: #FFF;
+                background: $color-white;    
+                box-shadow: 0 12px 60px rgb(10 10 10 / 30%);
                 .gh-carousel-subtitle {
                     margin-bottom: 20px;
                     font-size: 14px;
@@ -224,6 +225,7 @@ a {
             padding-top: 16px;
             .card-subtitle {
                 margin-bottom: 10px;
+                text-transform: capitalize;
                 font-style: normal;
                 font-weight: normal;
                 font-size: 13px;
@@ -306,7 +308,7 @@ a {
 }
 @media (max-width: 767px) {
     .gh-card {
-        color: #fff;
+        color: $color-white;
         text-decoration: none !important;
         background: $color-black;
 
@@ -319,16 +321,16 @@ a {
             .card-body {
                 width: 100%;
                 .card-subtitle {
-                    color: #fff; 
+                    color: $color-white; 
                     span {
                         color: $color-white;
                     }
                 }
                 .card-title {
-                    color: #fff;
+                    color: $color-white;
                 }
                 .card-text {
-                    color: #fff;
+                    color: $color-white;
                 }
             }
         }
