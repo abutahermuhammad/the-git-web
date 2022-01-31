@@ -19,12 +19,15 @@ const Hero = ({ data }) => {
                                 <Image
                                     className="d-block w-100"
                                     src={imageBuilder(item.image).width(1920).height(1080).url()}
-                                    alt="Third slide"
+                                    alt={item?.title}
                                     width={1920}
                                     height={1080}
                                 />
                                 <Carousel.Caption bsPrefix="gh-carousel-caption">
-                                    <h4 className="gh-carousel-subtitle">Article / Sea World</h4>
+                                    <h4 className="gh-carousel-subtitle">
+                                        {(item?._type == 'post') ? "Article" : item?.type?._type}
+                                         / 
+                                        {item?.category?.title}</h4>
                                     <h3 className="gh-carousel-title">{item.title}</h3>
                                     <p className="gh-carousel-desc">{item.excerpt}</p>
                                     

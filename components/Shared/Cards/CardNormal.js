@@ -5,15 +5,6 @@ import { imageBuilder } from '../../../lib/sanity'
 
 
 const CardNormal = ({ className, url, id, image, title, excerpt, subtitle }) => {
-    // console.log('data: ', data)
-
-    // let type;
-
-    // if (data?._type === "post") {
-    //     type = "Article"
-    // } else if (data?._type === "news") {
-    //     type = "News"
-    // }
     
     return (
         <>
@@ -24,7 +15,20 @@ const CardNormal = ({ className, url, id, image, title, excerpt, subtitle }) => 
 
                         <Card.Body>
                             <Card.Subtitle className="text-muted">
-                                {`${subtitle[0]} / ${subtitle[1]}` }
+                                <span style={{}}>{subtitle[0]}</span>
+                                <span> / </span>
+
+                                {subtitle[1]?.title && (
+                                    <span>
+                                        <Link as={`/categories/${subtitle[1]?.title}`} href={`/categories/[slug]`}>
+                                            <a className='text-black'>{subtitle[1]?.title ? subtitle[1]?.title : "Uncategorized"}</a>
+                                        </Link>
+                                    </span>
+
+                                )}
+
+                                { !subtitle[1]?.title && (<span>Uncategorized</span>)}
+
                             </Card.Subtitle>
                             {title && <Card.Title>{title}</Card.Title> }
                             {excerpt && <Card.Text>{excerpt}</Card.Text> }

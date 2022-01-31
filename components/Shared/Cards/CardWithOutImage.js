@@ -1,19 +1,29 @@
 import { Card } from 'react-bootstrap'
 import Link from 'next/link'
+import Date from '../../core/date'
 
 
-const CardWithOutImage = () => {
+const CardWithOutImage = ({className, url, date, author, _id, image, title, subtitle}) => {
+    console.log('Author: ', author);
+    console.log('Date: ', date);
+
     return (
         <>
-            <Card className="gh-card-no-img">
+            <Card className={`gh-card-no-img ${className}`}>
                 <Card.Body>
-                    <Link href={`/`}>
+                    <Link href={url}>
                         <a>
-                            <Card.Title>‘Mother Trees’ Are Intelligent: They Learn and Remember</Card.Title>
+                            <Card.Title>{title}</Card.Title>
                         </a>
                     </Link>
                     <Card.Text>AT. Muhammad H.</Card.Text>
-                    <Card.Subtitle><span>Insect World</span> / 28 May, 2021</Card.Subtitle>
+                    <Card.Subtitle>
+                        <span>{subtitle[1]?.title}</span>
+                         / 
+                         <span>
+                             {/* <Date dateString={date} /> */}
+                        </span>
+                    </Card.Subtitle>
                 </Card.Body>
             </Card>
         </>
